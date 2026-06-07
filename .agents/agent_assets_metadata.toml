@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "b_dBXu1xYuoZN06qOXchO"
+uri = "file://artifacts/flower-world/public/images/gallery-1.png"
+type = "image"
+title = "Macro shot of exotic purple orchid"
+
+[[generated]]
+id = "QRDs-AGmGhEcteL3PBRdi"
+uri = "file://artifacts/flower-world/public/images/gallery-2.png"
+type = "image"
+title = "Field of wild prairie roses"
+
+[[generated]]
+id = "QyZ3HCwght5kVADNTLaet"
+uri = "file://artifacts/flower-world/public/images/gallery-3.png"
+type = "image"
+title = "Elegant white lotus flower"
+
+[[generated]]
+id = "YOY4Q48BaJ7WvSobvJl_q"
+uri = "file://artifacts/flower-world/public/images/gallery-4.png"
+type = "image"
+title = "Vibrant red flame lily"
+
+[[generated]]
+id = "_1cD8AYs6iW3qHbgZOfbW"
+uri = "file://artifacts/flower-world/public/images/gallery-5.png"
+type = "image"
+title = "Blue poppy in himalayan landscape"
+
+[[generated]]
+id = "ebkbbbF_gJg-vdbGvOb0w"
+uri = "file://artifacts/flower-world/public/images/gallery-6.png"
+type = "image"
+title = "King protea majestic close up"
+
+[[generated]]
+id = "MAwDe8nAhbIW8prsr3rQv"
+uri = "file://artifacts/flower-world/public/images/hero-bg.png"
+type = "image"
+title = "Hero background dark floral"
