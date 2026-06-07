@@ -42,3 +42,33 @@ id = "MAwDe8nAhbIW8prsr3rQv"
 uri = "file://artifacts/flower-world/public/images/hero-bg.png"
 type = "image"
 title = "Hero background dark floral"
+
+[[generated]]
+id = "BXlUSzNy8AVshTlRWtrXl"
+uri = "file://attached_assets/generated_images/breathtaking_macro_photograph_of_2d8f.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "98dMqeJ2R6jyhadAmii1v"
+uri = "file://attached_assets/generated_images/elegant_japanese_cherry_blossom_1180.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "IYxjiP6wy_FTapi93zLSy"
+uri = "file://artifacts/flower-world/public/images/gallery-7.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "31jLBBcemjlgRi2Ph1dN0"
+uri = "file://artifacts/flower-world/public/images/gallery-9.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "A9zTBm6UnO87CSJlhMJpv"
+uri = "file://artifacts/flower-world/public/images/gallery-8.png"
+type = "image"
+title = "generated_image"
