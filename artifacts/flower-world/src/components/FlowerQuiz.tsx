@@ -1,59 +1,59 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const QUESTIONS = [
   {
     id: 1,
-    question: "What mood best describes you?",
+    question: "Кое настроение ви описва най-добре?",
     options: [
-      { text: "Mysterious & Deep", trait: "exotic" },
-      { text: "Bright & Cheerful", trait: "meadow" },
-      { text: "Calm & Reflective", trait: "water" },
-      { text: "Bold & Dramatic", trait: "tropical" }
+      { text: "Мистериозен и Дълбок", trait: "exotic" },
+      { text: "Ярък и Жизнерадостен", trait: "meadow" },
+      { text: "Спокоен и Замислен", trait: "water" },
+      { text: "Смел и Драматичен", trait: "tropical" }
     ]
   },
   {
     id: 2,
-    question: "Which season speaks to your soul?",
+    question: "Кой сезон говори на вашата душа?",
     options: [
-      { text: "Spring (Rebirth)", trait: "meadow" },
-      { text: "Summer (Vibrancy)", trait: "tropical" },
-      { text: "Autumn (Transition)", trait: "exotic" },
-      { text: "Winter (Stillness)", trait: "water" }
+      { text: "Пролет (Прераждане)", trait: "meadow" },
+      { text: "Лято (Жизненост)", trait: "tropical" },
+      { text: "Есен (Преход)", trait: "exotic" },
+      { text: "Зима (Тишина)", trait: "water" }
     ]
   },
   {
     id: 3,
-    question: "What color palette draws you in?",
+    question: "Коя цветова палитра ви привлича?",
     options: [
-      { text: "Deep Purples & Magentas", trait: "exotic" },
-      { text: "Warm Yellows & Oranges", trait: "meadow" },
-      { text: "Pure Whites & Blues", trait: "water" },
-      { text: "Vibrant Reds & Pinks", trait: "tropical" }
+      { text: "Дълбоко Лилаво и Магента", trait: "exotic" },
+      { text: "Топло Жълто и Оранжево", trait: "meadow" },
+      { text: "Чисто Бяло и Синьо", trait: "water" },
+      { text: "Ярко Червено и Розово", trait: "tropical" }
     ]
   }
 ];
 
 const RESULTS = {
   exotic: {
-    name: "Amazon Orchid",
-    meaning: "You possess a rare and complex beauty, thriving in depth and mystery.",
+    name: "Амазонска Орхидея",
+    meaning: "Притежавате рядка и сложна красота, процъфтяваща в дълбочина и мистерия.",
     color: "#a32cc4"
   },
   meadow: {
-    name: "Wild Prairie Rose",
-    meaning: "You bring natural warmth and resilient joy to everyone around you.",
+    name: "Дива Прерийна Роза",
+    meaning: "Носите естествена топлина и устойчива радост на всички около вас.",
     color: "#ffb6c1"
   },
   water: {
-    name: "Sacred Lotus",
-    meaning: "You find purity and calm amidst the chaos, always rising above.",
+    name: "Свещен Лотос",
+    meaning: "Намирате чистота и спокойствие сред хаоса, винаги издигайки се над него.",
     color: "#e6e6fa"
   },
   tropical: {
-    name: "King Protea",
-    meaning: "You are bold, majestic, and unafraid to stand out in a crowd.",
+    name: "Кралска Протея",
+    meaning: "Вие сте смели, величествени и не се страхувате да се откроите от тълпата.",
     color: "#ff6b6b"
   }
 };
@@ -91,7 +91,7 @@ const FlowerQuiz = () => {
             className="w-full text-center"
           >
             <span className="text-primary text-sm uppercase tracking-widest mb-4 block">
-              Question {currentStep + 1} of {QUESTIONS.length}
+              Въпрос {currentStep + 1} от {QUESTIONS.length}
             </span>
             <h3 className="font-serif text-2xl md:text-3xl mb-8">
               {QUESTIONS[currentStep].question}
@@ -100,6 +100,7 @@ const FlowerQuiz = () => {
               {QUESTIONS[currentStep].options.map((option, i) => (
                 <button
                   key={i}
+                  data-testid={`button-quiz-option-${i}`}
                   onClick={() => handleOptionClick(option.trait)}
                   className="p-4 border border-white/10 hover:border-primary/50 bg-background/50 hover:bg-primary/10 transition-all text-foreground/80 hover:text-primary rounded-sm"
                 >
@@ -116,16 +117,21 @@ const FlowerQuiz = () => {
             className="w-full text-center"
           >
             <span className="text-foreground/50 text-sm uppercase tracking-widest mb-4 block">
-              Your Match
+              Вашият Цвят
             </span>
-            <h3 className="font-serif text-4xl md:text-5xl mb-4 text-primary" style={{ color: getResult().color }}>
+            <h3 className="font-serif text-4xl md:text-5xl mb-4" style={{ color: getResult().color }}>
               {getResult().name}
             </h3>
             <p className="text-lg text-foreground/80 mb-8 max-w-md mx-auto">
               {getResult().meaning}
             </p>
-            <Button onClick={resetQuiz} variant="outline" className="border-primary/30 hover:bg-primary/10 text-primary">
-              Take Again
+            <Button
+              data-testid="button-quiz-restart"
+              onClick={resetQuiz}
+              variant="outline"
+              className="border-primary/30 hover:bg-primary/10 text-primary"
+            >
+              Опитай Отново
             </Button>
           </motion.div>
         )}

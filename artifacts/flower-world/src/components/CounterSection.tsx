@@ -1,14 +1,14 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 const stats = [
-  { value: 300, suffix: 'K+', label: 'Flower Species Worldwide' },
-  { value: 150, suffix: '+', label: 'Countries Explored' },
-  { value: 10, suffix: 'K+', label: 'Years of Floral Tradition' },
-  { value: 7, suffix: '', label: 'Continents of Wonder' },
+  { value: 300, suffix: 'K+', label: 'Вида Цветя по Света' },
+  { value: 150, suffix: '+', label: 'Изследвани Държави' },
+  { value: 10, suffix: 'K+', label: 'Години Цветарска Традиция' },
+  { value: 7, suffix: '', label: 'Континента на Чудесата' },
 ];
 
-const Counter = ({ value, suffix, label }: { value: number, suffix: string, label: string }) => {
+const Counter = ({ value, suffix, label }: { value: number; suffix: string; label: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -19,7 +19,7 @@ const Counter = ({ value, suffix, label }: { value: number, suffix: string, labe
       const end = value;
       const duration = 2000;
       const incrementTime = (duration / end) * 5;
-      
+
       const timer = setInterval(() => {
         start += Math.ceil(end / 50) || 1;
         if (start >= end) {
@@ -29,14 +29,14 @@ const Counter = ({ value, suffix, label }: { value: number, suffix: string, labe
           setCount(start);
         }
       }, incrementTime);
-      
+
       return () => clearInterval(timer);
     }
   }, [isInView, value]);
 
   return (
     <div ref={ref} className="text-center p-6 border border-white/5 bg-background/50 backdrop-blur-sm rounded-sm">
-      <div className="font-serif text-5xl md:text-7xl text-primary mb-4 shadow-primary/20 drop-shadow-lg">
+      <div className="font-serif text-5xl md:text-7xl text-primary mb-4 drop-shadow-lg">
         {count}{suffix}
       </div>
       <div className="text-sm uppercase tracking-widest text-foreground/70">{label}</div>

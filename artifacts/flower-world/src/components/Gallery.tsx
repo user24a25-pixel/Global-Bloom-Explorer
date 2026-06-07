@@ -2,15 +2,15 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FLOWERS = [
-  { id: 1, src: '/images/gallery-1.png', name: 'Purple Orchid', origin: 'Amazon Rainforest' },
-  { id: 2, src: '/images/gallery-2.png', name: 'Wild Prairie Rose', origin: 'North American Plains' },
-  { id: 3, src: '/images/gallery-3.png', name: 'Sacred Lotus', origin: 'Asian Waterways' },
-  { id: 4, src: '/images/gallery-4.png', name: 'Flame Lily', origin: 'African Savanna' },
-  { id: 5, src: '/images/gallery-5.png', name: 'Blue Himalayan Poppy', origin: 'Himalayas' },
-  { id: 6, src: '/images/gallery-6.png', name: 'King Protea', origin: 'South African Cape' },
-  { id: 7, src: '/images/gallery-7.png', name: 'Crimson Poppy', origin: 'Mediterranean Fields' },
-  { id: 8, src: '/images/gallery-8.png', name: 'Lavender Fields', origin: 'Provence, France' },
-  { id: 9, src: '/images/gallery-9.png', name: 'Cherry Blossom', origin: 'Japan' },
+  { id: 1, src: '/images/gallery-1.png', name: 'Лилава Орхидея', origin: 'Амазонска Джунгла' },
+  { id: 2, src: '/images/gallery-2.png', name: 'Дива Прерийна Роза', origin: 'Северноамериканска Прерия' },
+  { id: 3, src: '/images/gallery-3.png', name: 'Свещен Лотос', origin: 'Азиатски Водни Пътища' },
+  { id: 4, src: '/images/gallery-4.png', name: 'Пламтяща Лилия', origin: 'Африканска Савана' },
+  { id: 5, src: '/images/gallery-5.png', name: 'Синьо Хималайско Мак', origin: 'Хималаите' },
+  { id: 6, src: '/images/gallery-6.png', name: 'Кралска Протея', origin: 'Южноафрикански Нос' },
+  { id: 7, src: '/images/gallery-7.png', name: 'Тъмночервено Мак', origin: 'Средиземноморски Полета' },
+  { id: 8, src: '/images/gallery-8.png', name: 'Лавандулови Поля', origin: 'Прованс, Франция' },
+  { id: 9, src: '/images/gallery-9.png', name: 'Черешов Цвят', origin: 'Япония' },
 ];
 
 const Gallery = () => {
