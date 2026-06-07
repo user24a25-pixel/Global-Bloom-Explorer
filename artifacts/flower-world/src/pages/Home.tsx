@@ -191,7 +191,7 @@ const Home = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-xs text-foreground/40 uppercase tracking-widest">
-          &copy; {new Date().getFullYear()} Светът на Цветята. Всички права запазени.
+          &copy; {new Date().getFullYear()} worldofflowersbg.netlify.app. Всички права запазени.
         </div>
       </footer>
     </div>
